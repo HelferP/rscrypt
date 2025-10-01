@@ -83,6 +83,7 @@ download_awg_packages() {
 }
 
 check_repo
+
 download_awg_packages
 
 echo "Хотите установить все скачанные пакеты? (y/n)"
