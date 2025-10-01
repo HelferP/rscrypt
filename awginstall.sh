@@ -89,7 +89,7 @@ download_awg_packages
 echo "Хотите установить все скачанные пакеты? (y/n)"
 read -r answer
 if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
-  opkg install "$AWG_DIR/*.ipk"
+  opkg install "$AWG_DIR"/*.ipk
   echo "Установка завершена."
 else
   echo "Установка отменена. Для ручной установки выполните: opkg install *.ipk"
