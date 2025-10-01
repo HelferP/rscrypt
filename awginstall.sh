@@ -83,7 +83,7 @@ download_awg_packages() {
 }
 
 check_repo
-install_awg_packages
+download_awg_packages
 
 echo "Хотите установить все скачанные пакеты? (y/n)"
 read -r answer
