@@ -52,22 +52,22 @@ download_awg_packages() {
     fi
     
     if opkg list-installed | grep -q luci-proto-amneziawg; then
-        echo "luci-app-amneziawg already installed"
+        echo "luci-proto-amneziawg already installed"
     else
-        LUCI_APP_AMNEZIAWG_FILENAME="luci-app-amneziawg${PKGPOSTFIX}"
+        LUCI_APP_AMNEZIAWG_FILENAME="luci-proto-amneziawg${PKGPOSTFIX}"
         DOWNLOAD_URL="${BASE_URL}v${VERSION}/${LUCI_APP_AMNEZIAWG_FILENAME}"
         wget -O "$AWG_DIR/$LUCI_APP_AMNEZIAWG_FILENAME" "$DOWNLOAD_URL"
 
         if [ $? -eq 0 ]; then
-            echo "luci-app-amneziawg file downloaded successfully"
+            echo "luci-proto-amneziawg file downloaded successfully"
         else
-            echo "Error downloading luci-app-amneziawg. Please, install luci-app-amneziawg manually and run the script again"
+            echo "Error downloading luci-proto-amneziawg. Please, install luci-proto-amneziawg manually and run the script again"
             exit 1
         fi
     fi
     
     if opkg list-installed | grep -q luci-i18n-amneziawg-ru; then
-        echo "luci-app-amneziawg already installed"
+        echo "luci-i18n-amneziawg already installed"
     else
         LUCI_APP_AMNEZIAWG_FILENAME="luci-i18n-amneziawg-ru${PKGPOSTFIX}"
         DOWNLOAD_URL="${BASE_URL}v${VERSION}/${LUCI_APP_AMNEZIAWG_FILENAME}"
@@ -76,7 +76,7 @@ download_awg_packages() {
         if [ $? -eq 0 ]; then
             echo "luci-i18n-amneziawg-ru file downloaded successfully"
         else
-            echo "Error downloading luci-i18n-amneziawg-ru. Please, install luci-app-amneziawg manually and run the script again"
+            echo "Error downloading luci-i18n-amneziawg-ru. Please, install luci-i18n-amneziawg manually and run the script again"
             exit 1
         fi
     fi
